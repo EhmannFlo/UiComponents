@@ -1,0 +1,23 @@
+# Source files
+src/
+.storybook/
+
+# Dev files
+*.stories.js
+*.test.js
+*.spec.js
+
+# Config files
+vite.config.js
+tsconfig.json
+
+# Dependencies
+node_modules/
+
+# Build artifacts (except dist)
+storybook-static/
+
+# Misc
+.DS_Store
+*.log
+
