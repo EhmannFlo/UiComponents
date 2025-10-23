@@ -45,7 +45,7 @@ jobs:
       - name: Bump Version (if manual trigger)
         if: github.event_name == 'workflow_dispatch'
         run: |
-          npm version ${{ inputs.version-type }} -m "chore: bump version to %s [skip ci]"
+          npm version ${{ inputs.version-type }} -m 'chore: bump version to %s [skip ci]'
           git push --follow-tags
 
       - name: Build Package
