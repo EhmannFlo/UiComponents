@@ -31,13 +31,13 @@ In deinen Vue-Komponenten oder Pages:
 
 ```vue
 <script setup>
-import { Button } from 'flxuicomponents'
+import { FButton } from 'flxuicomponents'
 </script>
 
 <template>
   <div>
-    <Button variant="default">Click me</Button>
-    <Button variant="destructive" size="sm">Delete</Button>
+    <FButton variant="default">Click me</FButton>
+    <FButton variant="destructive" size="sm">Delete</FButton>
   </div>
 </template>
 ```
@@ -54,26 +54,26 @@ export default defineNuxtPlugin((nuxtApp) => {
 })
 ```
 
-Dann kannst du direkt `<Button>` ohne Import verwenden:
+Dann kannst du direkt `<FButton>` ohne Import verwenden:
 
 ```vue
 <template>
   <div>
-    <Button variant="default">Click me</Button>
+    <FButton variant="default">Click me</FButton>
   </div>
 </template>
 ```
 
 ## Verfügbare Komponenten
 
-### Button
+### FButton
 
 ```vue
-<Button variant="default" size="default">Default Button</Button>
-<Button variant="destructive" size="sm">Small Destructive</Button>
-<Button variant="outline" size="lg">Large Outline</Button>
-<Button variant="ghost">Ghost Button</Button>
-<Button variant="link">Link Button</Button>
+<FButton variant="default" size="default">Default Button</FButton>
+<FButton variant="destructive" size="sm">Small Destructive</FButton>
+<FButton variant="outline" size="lg">Large Outline</FButton>
+<FButton variant="ghost">Ghost Button</FButton>
+<FButton variant="link">Link Button</FButton>
 ```
 
 **Props:**
@@ -92,7 +92,7 @@ Stelle sicher, dass diese in deiner Tailwind-Konfiguration verfügbar sind (Stan
 
 ```vue
 <script setup>
-import { Button } from 'flxuicomponents'
+import { FButton } from 'flxuicomponents'
 </script>
 
 <template>
@@ -100,17 +100,17 @@ import { Button } from 'flxuicomponents'
     <h1 class="text-2xl font-bold">Meine App</h1>
     
     <div class="flex gap-2">
-      <Button variant="default">Standard</Button>
-      <Button variant="destructive">Löschen</Button>
-      <Button variant="outline">Outline</Button>
-      <Button variant="ghost">Ghost</Button>
-      <Button variant="link">Link</Button>
+      <FButton variant="default">Standard</FButton>
+      <FButton variant="destructive">Löschen</FButton>
+      <FButton variant="outline">Outline</FButton>
+      <FButton variant="ghost">Ghost</FButton>
+      <FButton variant="link">Link</FButton>
     </div>
     
     <div class="flex gap-2">
-      <Button size="sm">Klein</Button>
-      <Button size="default">Normal</Button>
-      <Button size="lg">Groß</Button>
+      <FButton size="sm">Klein</FButton>
+      <FButton size="default">Normal</FButton>
+      <FButton size="lg">Groß</FButton>
     </div>
   </div>
 </template>

@@ -1,15 +1,15 @@
 // Exportiere alle Komponenten
-export { default as Button } from './components/atom/Button.vue'
+export { default as FButton } from './components/atom/FButton.vue'
 
 // Exportiere Utility-Funktionen
 export { cn } from './utils'
 
 // Optional: Plugin für Vue.use()
 import type { App } from 'vue'
-import Button from './components/atom/Button.vue'
+import FButton from './components/atom/FButton.vue'
 
 export function install(app: App) {
-  app.component('Button', Button)
+  app.component('FButton', FButton)
   // Weitere Komponenten hier registrieren
 }
 
