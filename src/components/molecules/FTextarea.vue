@@ -83,6 +83,26 @@ const props = defineProps({
   fullWidth: {
     type: Boolean,
     default: false
+  },
+  wrapperClass: {
+    type: String,
+    default: ''
+  },
+  labelClass: {
+    type: String,
+    default: ''
+  },
+  textareaClass: {
+    type: String,
+    default: ''
+  },
+  helperClass: {
+    type: String,
+    default: ''
+  },
+  errorClass: {
+    type: String,
+    default: ''
   }
 })
 
@@ -93,20 +113,30 @@ const textareaId = computed(() => {
   return `f-textarea-${Math.random().toString(36).substr(2, 9)}`
 })
 
-const wrapperClasses = computed(() => ({
-  'w-full': props.fullWidth,
-  'inline-flex': !props.fullWidth,
-  'flex-col': true,
-  'gap-2': true,
-}))
+const wrapperClasses = computed(() =>
+  cn(
+    {
+      'w-full': props.fullWidth,
+      'inline-flex': !props.fullWidth,
+      'flex-col': true,
+      'gap-2': true,
+    },
+    props.wrapperClass
+  )
+)
 
-const labelClasses = computed(() => ({
-  'text-sm': true,
-  'font-medium': true,
-  'text-slate-700': !props.disabled,
-  'text-slate-500': props.disabled,
-  'cursor-pointer': !props.disabled
-}))
+const labelClasses = computed(() =>
+  cn(
+    {
+      'text-sm': true,
+      'font-medium': true,
+      'text-slate-700': !props.disabled,
+      'text-slate-500': props.disabled,
+      'cursor-pointer': !props.disabled
+    },
+    props.labelClass
+  )
+)
 
 const textareaClasses = computed(() => 
   cn(
@@ -126,20 +156,32 @@ const textareaClasses = computed(() =>
     props.invalid && 'aria-invalid:ring-red-500/20 dark:aria-invalid:ring-red-500/40 aria-invalid:border-red-500',
     // Disabled state
     'disabled:cursor-not-allowed disabled:opacity-50',
+    // Custom classes
+    props.textareaClass
   )
 )
 
-const helperClasses = computed(() => ({
-  'text-xs': true,
-  'text-slate-600': true,
-  'mt-1': true
-}))
+const helperClasses = computed(() =>
+  cn(
+    {
+      'text-xs': true,
+      'text-slate-600': true,
+      'mt-1': true
+    },
+    props.helperClass
+  )
+)
 
-const errorClasses = computed(() => ({
-  'text-xs': true,
-  'text-red-600': true,
-  'mt-1': true
-}))
+const errorClasses = computed(() =>
+  cn(
+    {
+      'text-xs': true,
+      'text-red-600': true,
+      'mt-1': true
+    },
+    props.errorClass
+  )
+)
 </script>
 
 <style scoped>
