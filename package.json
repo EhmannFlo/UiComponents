@@ -1,6 +1,6 @@
 {
   "name": "flxuicomponents",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Vue 3 UI Component Library mit Tailwind CSS",
   "type": "module",
   "main": "./dist/ui-components.umd.js",
