@@ -1,5 +1,5 @@
 <template>
-  <div class="f-textarea-wrapper" :class="wrapperClasses">
+  <div class="flex" :class="wrapperClasses">
     <label v-if="label" :for="textareaId" :class="labelClasses">
       {{ label }}
       <span v-if="required" class="text-red-500 ml-1">*</span>
@@ -132,7 +132,6 @@ const labelClasses = computed(() =>
       'font-medium': true,
       'text-slate-700': !props.disabled,
       'text-slate-500': props.disabled,
-      'cursor-pointer': !props.disabled
     },
     props.labelClass
   )
@@ -183,10 +182,4 @@ const errorClasses = computed(() =>
   )
 )
 </script>
-
-<style scoped>
-.f-textarea-wrapper {
-  display: flex;
-}
-</style>
 
