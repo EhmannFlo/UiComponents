@@ -15,11 +15,9 @@ const config = {
     "options": {}
   },
   async viteFinal(config) {
-    const { default: vue } = await import('@vitejs/plugin-vue');
     const { default: tailwindcss } = await import('@tailwindcss/vite');
     
     config.plugins = config.plugins || [];
-    config.plugins.push(vue());
     config.plugins.push(tailwindcss());
     return config;
   }
